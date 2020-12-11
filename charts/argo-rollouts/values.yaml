@@ -1,0 +1,51 @@
+installCRDs: true
+
+clusterInstall: true
+
+controller:
+  name: argo-rollouts
+  component: rollouts-controller
+  ## Node selectors and tolerations for server scheduling to nodes with taints
+  ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+  ##
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+  image:
+    repository: argoproj/argo-rollouts
+    tag: v0.9.1
+    pullPolicy: IfNotPresent
+
+  resources: {}
+  #  limits:
+  #    cpu: 100m
+  #    memory: 128Mi
+  #  requests:
+  #    cpu: 50m
+  #    memory: 64Mi
+
+  metrics:
+    serviceMonitor:
+      enabled: false
+      additionalLabels: {}
+      additionalAnnotations: {}
+
+
+serviceAccount:
+  name: argo-rollouts
+
+## Annotations to be added to the Rollout pods
+##
+podAnnotations: {}
+
+## Annotations to be added to the Rollout service
+##
+serviceAnnotations: {}
+
+## Labels to be added to the Rollout pods
+##
+podLabels: {}
+
+# Secrets with credentials to pull images from a private registry
+imagePullSecrets: []
+# - name: argo-pull-secret
