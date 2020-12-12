@@ -300,7 +300,10 @@ artifactRepository:
     # serviceAccountKeySecret:
       # name: my-gcs-credentials
       # key: serviceAccountKey
-
+- name: minio
+  version: 5.0.6
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  condition: minio.install
 
 # NOTE: These are setting attributes for the `minio` optional dependency
 minio:
