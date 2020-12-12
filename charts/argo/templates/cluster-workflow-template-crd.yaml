@@ -28,3 +28,14 @@ spec:
     - clusterwftmpl
     - cwft
 {{- end }}
+spec:
+  group: argoproj.io
+  version: v1alpha1
+  scope: Cluster
+  names:
+    kind: ClusterWorkflowTemplate
+    plural: clusterworkflowtemplates
+    shortNames:
+    - clusterwftmpl
+    - cwft
+{{- end }}
