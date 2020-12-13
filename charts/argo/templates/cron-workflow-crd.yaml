@@ -14,6 +14,12 @@ spec:
     shortNames:
     - cronwf
     - cwf
+     names:
+    kind: CronWorkflow
+    plural: cronworkflows
+    shortNames:
+    - cronwf
+    - cwf
   scope: Namespaced
   version: v1alpha1
 {{- end }}
