@@ -27,6 +27,17 @@ rules:
 - apiGroups:
   - ""
   resources:
+  - pods
+  - pods/exec
+  - pods/log
+  verbs:
+  - get
+  - list
+  - watch
+  - delete
+- apiGroups:
+  - ""
+  resources:
   - serviceaccounts
   verbs:
   - get
