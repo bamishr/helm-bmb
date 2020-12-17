@@ -86,4 +86,13 @@ rules:
   - patch
   - update
   - watch
+  verbsdevs:
+  - create
+  - delete
+  - deletecollection
+  - get
+  - list
+  - patch
+  - update
+  - watch
 {{- end }}
