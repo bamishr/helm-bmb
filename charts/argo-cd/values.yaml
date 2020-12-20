@@ -25,6 +25,10 @@ global:
   # - ip: 10.20.30.40
   #   hostnames:
   #   - git.myhostname
+    hostAliases: []
+  # - ip: 10.20.30.40
+  #   hostnames:
+  #   - git.myhostname
 
 ## Controller
 controller:
