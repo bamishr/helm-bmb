@@ -212,6 +212,18 @@ spec:
                     items:
                       type: string
                     type: array
+                    properties:
+                ignore:
+                  items:
+                    properties:
+                      group:
+                        type: string
+                      kind:
+                        type: string
+                      name:
+                        type: string
+                    type: object
+                  type: array
                   duration:
                     description: Duration is the amount of time the sync window will be open
                     type: string
