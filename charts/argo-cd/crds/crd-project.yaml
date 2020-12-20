@@ -156,6 +156,18 @@ spec:
                       - iat
                       type: object
                     type: array
+                    properties:
+                ignore:
+                  items:
+                    properties:
+                      group:
+                        type: string
+                      kind:
+                        type: string
+                      name:
+                        type: string
+                    type: object
+                  type: array
                   name:
                     description: Name is a name for this role
                     type: string
