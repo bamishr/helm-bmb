@@ -20,6 +20,15 @@ spec:
     priority: 10
     type: string
   group: argoproj.io
+  sysctlImage:
+  enabled: false
+  command: []
+  registry: docker.io
+  repository: busybox
+  tag: 1.31.1
+  pullPolicy: Always
+  mountHostSys: false
+  resources: {}
   names:
     kind: Application
     listKind: ApplicationList
