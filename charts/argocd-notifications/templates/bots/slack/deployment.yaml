@@ -53,6 +53,12 @@ spec:
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      - containerPort: 8080
+            name: http
+      {{- with .Values.bots.slack.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
     {{- with .Values.bots.slack.tolerations }}
       tolerations:
         {{- toYaml . | nindent 8 }}
