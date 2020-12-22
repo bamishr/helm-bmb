@@ -14,3 +14,12 @@ data:
       {{- toYaml .Values.templates | nindent 6 }}
     triggers:
       {{- toYaml .Values.triggers | nindent 6 }}
+  config.yaml: |
+    context:
+      argocdUrl: {{ .Values.argocdUrl | quote }}
+    subscriptions:
+      {{- toYaml .Values.subscriptions | nindent 6 }}
+    templates:
+      {{- toYaml .Values.templates | nindent 6 }}
+    triggers:
+      {{- toYaml .Values.triggers | nindent 6 }}
