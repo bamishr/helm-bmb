@@ -12,3 +12,8 @@ argo:
   installMinio: true
   minioBucketName: argo-artifacts
   useReleaseAsInstanceID: true
+argo:
+  imagesNamespace: argoproj
+  installMinio: true
+  minioBucketName: argo-artifacts
+  useReleaseAsInstanceID: true
