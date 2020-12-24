@@ -14,3 +14,8 @@ additionalSaNamespaces:
   - nstwo
 instanceID: test-argo-events
 singleNamespace: false
+additionalSaNamespaces:
+  - nsone
+  - nstwo
+instanceID: test-argo-events
+singleNamespace: false
