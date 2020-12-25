@@ -1279,6 +1279,29 @@ spec:
                                                   required:
                                                   - port
                                                   type: object
+                                                  iscsi:
+                                              properties:
+                                                chapAuthDiscovery:
+                                                  type: boolean
+                                                chapAuthSession:
+                                                  type: boolean
+                                                fsType:
+                                                  type: string
+                                                initiatorName:
+                                                  type: string
+                                                iqn:
+                                                  type: string
+                                                iscsiInterface:
+                                                  type: string
+                                                lun:
+                                                  format: int32
+                                                  type: integer
+                                                portals:
+                                                  items:
+                                                    type: string
+                                                  type: array
+                                                readOnly:
+                                                  type: boolean
                                                 initialDelaySeconds:
                                                   format: int32
                                                   type: integer
