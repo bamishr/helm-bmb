@@ -57,3 +57,19 @@ fi
     echo "Processing $dir"
     helm --debug package $dir
 done
+   if [ $(helm dep list $dir 2>/dev/null| wc -l) -gt 1 ]
+    then
+        # Bug with Helm subcharts with hyphen on them
+        # https://github.com/argoproj/argo-helm/pull/270#issuecomment-608695684
+        if [ "$name" == "argo-cd" ]
+        then
+            echo "Restore ArgoCD RedisHA subchart"
+            git checkout $dir
+        fi
+        echo "Processing chart dependencies"
+        helm --debug dep build $dir
+    fi
+
+    echo "Processing $dir"
+    helm --debug package $dir
+done
