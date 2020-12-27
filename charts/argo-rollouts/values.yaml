@@ -62,3 +62,16 @@ podLabels: {}
 # Secrets with credentials to pull images from a private registry
 imagePullSecrets: []
 # - name: argo-pull-secret
+podAnnotations: {}
+
+## Annotations to be added to the Rollout service
+##
+serviceAnnotations: {}
+
+## Labels to be added to the Rollout pods
+##
+podLabels: {}
+
+# Secrets with credentials to pull images from a private registry
+imagePullSecrets: []
+# - name: argo-pull-secret
