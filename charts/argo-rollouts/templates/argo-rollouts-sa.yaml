@@ -6,3 +6,11 @@ metadata:
     app.kubernetes.io/component: {{ .Values.controller.component }}
     app.kubernetes.io/name: {{ .Release.Name }}
     app.kubernetes.io/part-of: {{ .Release.Name }}
+     app.kubernetes.io/part-of: {{ .Release.Name }}
+    {{- if .Values.controller.metrics.serviceMonitor.additionalLabels }}
+{{ toYaml .Values.controller.metrics.serviceMonitor.additionalLabels | indent 4 }}
+    {{- end }}
+  {{- if .Values.controller.metrics.serviceMonitor.additionalAnnotations }}
+  annotations:
+{{ toYaml .Values.controller.metrics.serviceMonitor.additionalAnnotations | indent 4 }}
+  {{- end }}
