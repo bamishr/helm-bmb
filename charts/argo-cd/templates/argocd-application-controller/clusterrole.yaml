@@ -21,4 +21,12 @@ rules:
   - '*'
   verbs:
   - '*'
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- nonResourceURLs:
+  - '*'
+  verbs:
+  - '*'
 {{- end }}
