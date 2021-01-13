@@ -22,4 +22,8 @@ subjects:
 - kind: ServiceAccount
   name: {{ template "argo-cd.controllerServiceAccountName" . }}
   namespace: {{ .Release.Namespace }}
+subjects:
+- kind: ServiceAccount
+  name: {{ template "argo-cd.controllerServiceAccountName" . }}
+  namespace: {{ .Release.Namespace }}
 {{- end }}
