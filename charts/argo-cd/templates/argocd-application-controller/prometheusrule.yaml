@@ -18,6 +18,8 @@ metadata:
     {{- end }}
     {{- if .Values.controller.metrics.rules.additionalLabels }}
 {{- toYaml .Values.controller.metrics.rules.additionalLabels | nindent 4 }}
+{{- with .Values.controller.extraArgs }}
+        {{- . | toYaml | nindent 8 }}
     {{- end }}
 spec:
   groups:
