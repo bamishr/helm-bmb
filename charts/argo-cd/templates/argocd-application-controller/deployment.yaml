@@ -73,6 +73,8 @@ spec:
         {{- if .Values.controller.containerSecurityContext }}
         {{- with .Values.controller.extraArgs }}
         {{- . | toYaml | nindent 8 }}
+        {{- with .Values.controller.extraArgs }}
+        {{- . | toYaml | nindent 8 }}
         securityContext: {{- toYaml .Values.controller.containerSecurityContext | nindent 10 }}
         {{- end }}
         {{- if .Values.controller.env }}
