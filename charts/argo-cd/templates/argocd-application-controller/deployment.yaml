@@ -119,6 +119,8 @@ spec:
     {{- if .Values.controller.affinity }}
       affinity:
 {{- toYaml .Values.controller.affinity | nindent 8 }}
+{{- with .Values.controller.extraArgs }}
+        {{- . | toYaml | nindent 8 }}
     {{- end }}
       serviceAccountName: {{ template "argo-cd.controllerServiceAccountName" . }}
 {{- with .Values.global.hostAliases }}
