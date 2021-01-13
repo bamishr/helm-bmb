@@ -71,6 +71,8 @@ spec:
         imagePullPolicy: {{ default .Values.global.image.imagePullPolicy .Values.controller.image.imagePullPolicy }}
         name: {{ .Values.controller.name }}
         {{- if .Values.controller.containerSecurityContext }}
+        {{- with .Values.controller.extraArgs }}
+        {{- . | toYaml | nindent 8 }}
         securityContext: {{- toYaml .Values.controller.containerSecurityContext | nindent 10 }}
         {{- end }}
         {{- if .Values.controller.env }}
