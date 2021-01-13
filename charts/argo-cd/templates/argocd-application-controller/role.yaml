@@ -24,6 +24,11 @@ rules:
   resources:
   - applications
   - appprojects
+  - list
+  - watch
+  - update
+  - patch
+  - delete
   verbs:
   - create
   - get
